@@ -1,92 +1,116 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-
-  
-
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>BurgerKing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@200;400;600&family=Source+Serif+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-  <!-- <button id ="history" onclick="history.back()">Go Back << </button> -->
-
-  <button onclick="getLocation()">Get location1</button>
-  <p id="geodemo"></p>
-
-  <button onclick="getLocation2()">Watch Position</button>
-  <p id="geodemo2"></p>
-
-  
-  <button onclick="myReplace()"> Try it </button>
-
-  <img> </img>
-  
-  <p id="replace">Please visit Microsoft!</p>
- 
-  <button onclick="getLocation()">Get location</button>
-
-  <p id = "geo2">  </p>
-  <p id = "geo3">  </p>
-  <p id = "ftn1">  </p>
-  <p id = "ftn2"> </p>
-
-  <p id = "ftn3"> </p> 
-  <p id = "check"> Second QSA paragraph </p>
-  <p id="call"> Access by class name.</p>
-  <p id ="call2">This example demonstrates the
-  <p id = "new1"> </p>
-
-    <p id = "new2">  </p>
-    <p id = "length">  </p>
-   <h2 id = "slice">  </h2>
-   <p id="substr"> </p>
-    <p id="replace"> </p> 
-    <p id="concat"></p>  
-    <p id="trim"></p> 
-  <p id="pad"></p> 
-    <p id="tostr"></p > 
-  <p id="value"></p> 
-  <p id="int"></p>
-   <p id="float"></p>
-  <p id="zero"> </p>
-   <p id="one"> </p> -->
-  
-  
-  <!-- <img src="https://picsum.photos/200/300" height="100" width="100"> </img> -->
-
-
-  
-
-
-
-   <!-- <b>getElementsByClassName</b> method.</p>
-  <ul id="menu"> 
-       <li> Home </li> 
-       <li> Products </li> 
-       <li> About Us </li>
-       <li> Contact Us </li>
-   </ul>
- -->
-
-
-  
-<!-- 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <footer id = "div1">  </footer>
-  <script src="script.js"> </script>
-  <script src="script2.js"> </script>
-   <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
-
-  
+    
+    <!--on click function (hamburger menu) in header-->
+    <header>
+        <div class="toggle-btn" onclick="myFunction();">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <!--Navigation with unordered list-->    
+        <nav id="nav">
+            <ul class="nav_links">
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Menu</a></li> 
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">More</a></li>
+            </ul>        
+        </nav>
+    <!--logo with 2 buttons and alert function-->    
+        <img class="logo" src="logo.jpg" alt="logo">     
+        <a class="button1" onclick="myFunction2()" href="#"><button>Sign up</button></a>
+        <button class="btn2" onclick="myFunction3()"><a href="#"></a><i class="fa-solid fa-basket-shopping">&nbsp;&nbsp;&nbsp;</i>£0.00</button>
+    </header>
+    <!--container with image and button with change image function-->
+    <figure class="container">
+        <img class="longer" id="longer-img" src="img1.webp" alt="longer">
+        <a class="btn3" onclick="imagefun()" value="Change Image"  href="#"><button>Find out more</button></a>
+    </figure>
+    <!--image container with 4 images-->
+    <section class="img_container">
+        <img class="img2" src="img2.png" alt="longer1">
+        <img class="img3" src="img3.png" alt="longer1">
+        <img class="img4" src="img4.png" alt="longer1">
+        <img class="img5" src="img5.png" alt="longer1">
+    </section>
+    <!--article with bigger image function, text and badges-->
+    <article>
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="phone" href="#" src="img6.webp" alt="phone">
+        <aside>
+            <h1 class="h1">Save £££<br>With offers on<br> demand</h1>
+            <img class="googleplay" src="badges1.png" alt="gplay">
+            <img class="appstore" src="badges2.png" alt="appstore">
+            <p>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play is a trademark of Google Inc. Terms apply.</p>
+        </aside>
+    </article>
+    <!--footer with unordered list and social links-->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>BK<span class="custom-trademark">&reg;</span> INFO</h2>
+                    <ul>
+                        <li><a href="#">About BK&reg; </a></li>
+                        <li><a href="#">Policies;</a></li>
+                        <li><a href="#">Get in touch</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Guest Trac</a></li>
+                        <li><a href="#">Trademarks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>BK<span class="custom-trademark">&reg;</span> AND YOU</h2>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Modern Slavery Statement</a></li>
+                        <li><a href="#">Tax Strategy</a></li>
+                        <li><a href="#">BK&reg; Deliveres</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="footer-bottom">
+            <div class="row1">
+                <div class="footer-col2">
+                    <h2 class="bk">BURGER KING<span class="custom-trademark">&reg;</span></h2>
+                    <div class="social-links">
+                        <a href="#"><i id="globe" class="fa-solid fa-globe">&nbsp;EN/GB</i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="copyright-text">
+                        TM &amp; Copyright 2021 Burger King Corporation. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="stickyfooter">
+        
+    </footer>
+    <script src="script.js"></script> 
 </body>
-
 </html>
